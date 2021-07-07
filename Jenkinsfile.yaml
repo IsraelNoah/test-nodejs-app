@@ -3,10 +3,6 @@ pipeline:
   tools:
     nodejs: "node"
   stages:
-    - stage: "Cloning Git"
-      steps:
-         script:
-                 - withCredentials: "[usernamePassword(credentialsId: 'credGithub', passwordVariable: '68NE3CcqLWZauP9', usernameVariable: 'IsraelNoah')]"
     - stage: "Install Dependencies" 
       steps:
          - sh "npm install" 
