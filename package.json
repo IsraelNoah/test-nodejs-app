@@ -1,0 +1,14 @@
+
+{
+  " nom " : " docker_web_app " ,
+  " version " : " 1.0.0 " ,
+  " description " : " Node.js sur Docker " ,
+  " author " : " First Last <first.last@example.com> " ,
+  " principal " : " serveur.js " ,
+  " scripts " : {
+    " start " : " node server.js "
+  },
+  " dépendances " : {
+    " exprimer " : " ^4.16.1 "
+  }
+
