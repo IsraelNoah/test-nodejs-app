@@ -3,6 +3,9 @@ pipeline:
   tools:
     nodejs: "node"
   stages:
+    - stage: "Checkout git"
+      steps:
+         - sh "git branch: 'main', credentialsId: 'credGithub', url: 'https://github.com/IsraelNoah/test-nodejs-app'"
     - stage: "Install Dependencies" 
       steps:
          - sh "npm install" 
