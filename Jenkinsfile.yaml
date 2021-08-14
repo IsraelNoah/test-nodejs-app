@@ -5,7 +5,7 @@ pipeline:
   stages:
     - stage: "Connexion entre Github et Jenkins"
       steps:
-         git branch: 'main', credentialsId: 'credGithub', url: 'https://github.com/IsraelNoah/test-nodejs-app.git'
+         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'credGithub', url: 'https://github.com/IsraelNoah/test-nodejs-app']]])
     - stage: "Install Dependencies" 
       steps:
          - sh "npm install" 
