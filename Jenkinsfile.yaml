@@ -3,9 +3,6 @@ pipeline:
   tools:
     nodejs: "node"
   stages:
-    - stage: "Connexion entre Github et Jenkins"
-      steps:
-        git branch: 'main', credentialsId: 'credGithub', url: 'https://github.com/IsraelNoah/test-nodejs-app.git'
     - stage: "Install Dependencies" 
       steps:
          - sh "npm install" 
