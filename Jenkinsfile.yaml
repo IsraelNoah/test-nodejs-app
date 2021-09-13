@@ -5,6 +5,7 @@ pipeline:
   stages:
     - stage: "Install Dependencies" 
       steps:
+         - checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-credID', url: 'https://github.com/IsraelNoah/test-nodejs-app.git']]])
          - sh "npm install" 
     - stage: "Running npm"
       steps:
